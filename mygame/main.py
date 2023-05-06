@@ -10,18 +10,18 @@ screen = pygame.display.set_mode((x,y))
 pygame.display.set_caption('Space Defender')
 
 
-bg = pygame.image.load('images/bg.png').convert_alpha()
+bg = pygame.image.load('mygame/images/bg.png').convert_alpha()
 bg = pygame.transform.scale(bg, (x,y))
 
-alien = pygame.image.load('images/spaceship.png').convert_alpha()
+alien = pygame.image.load('mygame/images/spaceship.png').convert_alpha()
 alien = pygame.transform.scale(alien, (50,50))
 
 
-playerImg = pygame.image.load('images/space.png').convert_alpha()
+playerImg = pygame.image.load('mygame/images/space.png').convert_alpha()
 playerImg = pygame.transform.scale(playerImg, (50,50))
 #playerImg = pygame.transform.rotate(playerImg, -90)
 
-missil = pygame.image.load('images/missile.png').convert_alpha()
+missil = pygame.image.load('mygame/images/missile.png').convert_alpha()
 missil = pygame.transform.scale(missil, (25,25))
 #missil = pygame.transform.rotate(missil, -45)
 
@@ -41,7 +41,7 @@ triggered = False
 
 rodando = True
 
-font = pygame.font.SysFont('fonts/PixelGameFont.ttf', 50)
+font = pygame.font.SysFont('mygame/fonts/PixelGameFont.ttf', 50)
 
 
 player_rect = playerImg.get_rect()
@@ -150,6 +150,6 @@ while rodando:
     screen.blit(missil, (pos_missil_x,pos_missil_y))
     screen.blit(playerImg, (pos_player_x, pos_player_y))
     
-    print(pontos)
+    #print(pontos)
 
     pygame.display.update()
